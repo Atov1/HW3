@@ -10,6 +10,11 @@
 Console.Write("Введите 5ти значное число: ");
 int N = int.Parse(Console.ReadLine());
 
+Console.Write($"{N} -> ");
+if (N<0)
+{
+    N = N * (-1);
+}
 if (N < 10000 || N > 99999) //проверка на пятизначность
 {
     Console.Write("число не пятизначное");
@@ -18,9 +23,9 @@ else
 {string str = N.ToString(); 
 if (str[0] == str[4] && str[1] == str[3]) // проверка 1 цифры и последней, а также второй и предпоследней
 {
-    Console.Write($"{N} -> полиндром");
+    Console.Write("полиндром");
 }
 else
 {
-    Console.Write($"{N} -> не полиндром");
+    Console.Write("не полиндром");
 }}
